@@ -1,0 +1,21 @@
+{
+  "name": "roik.pro",
+  "version": "1.0.0",
+  "description": "all the stuff you might ever need",
+  "main": "build/index.html",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-csscomb": "^3.0.8",
+    "gulp-image": "^2.7.2",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sass": "^2.3.2",
+    "rimraf": "^2.5.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "JoncoLAb",
+  "license": "ISC"
+}

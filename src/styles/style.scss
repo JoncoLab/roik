@@ -1,0 +1,380 @@
+@import "templates/variables";
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background: {
+    color: fade_out(white, 0.7);
+    image: url("../images/bg.png");
+    size: cover;
+    repeat: no-repeat;
+    position: center;
+    blend-mode: overlay;
+  }
+
+  header {
+    &.plain {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      background: {
+        color: fade_out($diybg, 0.5);
+      }
+      .logo {
+        display: flex;
+        flex-basis: 50%;
+        flex-grow: 1;
+      }
+
+      .contacts {
+        flex-basis: 50%;
+        flex-grow: 1;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        color: $joncobg;
+
+        > img {
+          height: $line * 8;
+        }
+
+        table {
+          tr {
+            td {
+              font: {
+                weight: bold;
+              }
+              text: {
+                align: center;
+              }
+
+              &:first-of-type {
+                text: {
+                  align: right;
+                }
+              }
+
+              &:last-of-type {
+                text: {
+                  align: left;
+                }
+              }
+
+              img {
+                height: $line * 2;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &.navigation {
+      position: relative;
+
+      .main-menu {
+        display: flex;
+
+        .menu-item {
+          flex-grow: 1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: row-reverse;
+          cursor: pointer;
+          flex-basis: 25%;
+
+          h2 {
+            text: {
+              align: center;
+            }
+            padding: 0 $line 0 0;
+          }
+
+          &:hover {
+            background: fade-out(red, 0.5);
+          }
+          &[data-id="life-beauty"] {
+            background: {
+              color: $fitobg;
+            }
+            color: $fitomain;
+          }
+          &[data-id="jonco"] {
+            background: {
+              color: $joncobg;
+            }
+            color: $joncomain;
+          }
+          &[data-id="diy"] {
+            background: {
+              color: $diybg;
+            }
+            color: $diymain;
+          }
+          &[data-id="smart-house"] {
+            background: {
+              color: $smarthousebg;
+            }
+            color: $smarthousemain;
+          }
+
+          img {
+            height: $line * 9;
+            padding: $line;
+          }
+        }
+      }
+    }
+  }
+
+  main {
+    flex-grow: 1;
+    display: flex;
+
+    section {
+      cursor: pointer;
+      flex-grow: 1;
+      transform-origin: top;
+      transform: scaleY(0);
+
+      background: {
+        size: auto 100%;
+        position: right;
+        repeat: no-repeat;
+      }
+
+      transition: {
+        duration: $time;
+        timing-function: ease-out;
+      }
+
+      &.active {
+        transform: scaleY(1);
+      }
+
+      &:hover {
+        background: {
+          position: left;
+        }
+      }
+
+      &[data-id="life-beauty"] {
+        background: {
+          image: url("../images/fito.png");
+        }
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h2 {
+          transition: {
+            duration: $time;
+          }
+          display: none;
+          background: {
+            image: linear-gradient(lighten($fitobg, 30%), lighten($fitobg, 10%));
+          }
+          text: {
+            align: center;
+          }
+          font: {
+            size: $line * 4;
+          }
+          color: $fitomain;
+          padding: $line * 2;
+          transform: skewY(-30deg);
+
+          span {
+            display: inline-block;
+            transform:
+                    skewY(30deg)
+                    rotate(-30deg);
+          }
+        }
+      }
+
+      &[data-id="jonco"] {
+        background: {
+          image: url("../images/jonco.png");
+        }
+      }
+
+      &[data-id="diy"] {
+        background: {
+          image: url("../images/diy.png");
+        }
+        display: flex;
+        justify-content: center;
+
+        #reg {
+          background: fade_out($diybg, 0.3);
+          color: $diybg;
+          display: none;
+          flex-direction: column;
+
+          h2 {
+            margin: 0;
+            padding: $line / 2;
+            background: {
+              color: $diymain;
+            }
+            text: {
+              align: center;
+            }
+            border: {
+              bottom: $line / 2 solid $diybg;
+            }
+          }
+
+          #data {
+            border: none;
+
+            label {
+              display: inline-block;
+              background: {
+                color: $diymain;
+              }
+              padding: $line / 2 0;
+              width: 100%;
+              font: {
+                size: $line * 2;
+                weight: bold;
+              }
+              text: {
+                align: center;
+              }
+              border: {
+                top-right-radius: $line;
+                top-left-radius: $line;
+              }
+            }
+
+            input,
+            textarea {
+              display: inline-block;
+              background: {
+                color: $diybg;
+              }
+              color: black;
+              box-shadow: 0 0 0 $line / 5 $diymain inset;
+              padding: $line / 2 0;
+              margin: 0 0 $line 0;
+              width: 100%;
+              font: {
+                size: $line * 1.5;
+              }
+              border: {
+                style: none;
+                bottom-right-radius: $line;
+                bottom-left-radius: $line;
+              }
+              text: {
+                align: center;
+              }
+
+              &:active,
+              &:focus {
+                outline: none;
+              }
+            }
+
+            textarea {
+              resize: none;
+              padding: 2%;
+              width: 96.1%;
+              margin: 0;
+            }
+          }
+
+          #buttons {
+            border: none;
+            padding: 0 0 $line 0;
+            text: {
+              align: center;
+            }
+
+            label {
+              display: inline-block;
+              width: 40%;
+              padding: $line / 2;
+
+              background: {
+                image: linear-gradient(darken($diymain, 10%), lighten($diymain, 10%));
+              }
+
+              font: {
+                size: $line * 2;
+                weight: bold;
+              }
+              border: {
+                radius: $line;
+              }
+
+              &:active,
+              &:focus {
+                background: {
+                  image: linear-gradient(lighten($diymain, 10%), darken($diymain, 10%));
+                }
+              }
+            }
+
+            input {
+              display: none;
+            }
+          }
+        }
+      }
+
+      &[data-id="smart-house"] {
+        background: {
+          image: url("../images/smarthouse.png");
+        }
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h2 {
+          transition: {
+            duration: $time;
+          }
+          display: none;
+          background: {
+            image: linear-gradient(lighten($smarthousebg, 20%), lighten($smarthousebg, 30%));
+          }
+          text: {
+            align: center;
+          }
+          font: {
+            size: $line * 4;
+          }
+          color: $smarthousemain;
+          padding: $line * 2;
+          transform: skewY(-30deg);
+
+          span,
+          small {
+            display: inline-block;
+            transform:
+                    skewY(30deg)
+                    rotate(-30deg);
+          }
+        }
+      }
+    }
+  }
+}
