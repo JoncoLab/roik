@@ -58,7 +58,12 @@ var path = {
     },
     
     clean: 'build*'
-};
+},
+    toGitHubPages = [
+        'build/*',
+        'build/**/*',
+        'build/**/**/*'
+    ];
 
 //Збірка html
 gulp.task('html:build', function () {
@@ -150,3 +155,8 @@ gulp.task('clean', function (callback) {
 
 //Запуск роботи з проектом
 gulp.task('default', ['project:build', 'watch']);
+
+gulp.task('github:build', function () {
+    gulp.src(toGitHubPages)
+        .pipe(gulp.dest('docs/'));
+});

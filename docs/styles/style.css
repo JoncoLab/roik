@@ -1,0 +1,440 @@
+html,
+body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    position: relative;
+
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+
+    background-color: rgba(255, 255, 255, .3);
+    background-image: url('../images/bg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    -webkit-box-pack: justify;
+
+        -ms-flex-pack: justify;
+
+            justify-content: space-between;
+    background-blend-mode: overlay;
+}
+body header.plain
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    background-color: rgba(254, 254, 254, .5); 
+
+    -webkit-box-pack: center; 
+
+        -ms-flex-pack: center; 
+
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+body header.plain .logo
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    -ms-flex-preferred-size: 50%;
+
+        flex-basis: 50%;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+}
+body header.plain .contacts
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    color: #292d2e; 
+
+    -ms-flex-preferred-size: 50%; 
+
+        flex-basis: 50%;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+body header.plain .contacts > img
+{
+    height: 80px;
+}
+body header.plain .contacts table tr td
+{
+    font-weight: bold;
+
+    text-align: center;
+}
+body header.plain .contacts table tr td:first-of-type
+{
+    text-align: right;
+}
+body header.plain .contacts table tr td:last-of-type
+{
+    text-align: left;
+}
+body header.plain .contacts table tr td img
+{
+    height: 20px;
+}
+body header.navigation
+{
+    position: relative;
+}
+body header.navigation .main-menu
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+body header.navigation .main-menu .menu-item
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+
+    cursor: pointer;
+
+    -webkit-box-flex: 1;
+
+        -ms-flex-positive: 1;
+
+            flex-grow: 1;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
+}
+body header.navigation .main-menu .menu-item h2
+{
+    padding: 0 10px 0 0; 
+
+    text-align: center;
+}
+body header.navigation .main-menu .menu-item:hover
+{
+    background: rgba(255, 0, 0, .5);
+}
+body header.navigation .main-menu .menu-item[data-id='life-beauty']
+{
+    color: #55781e; 
+    background-color: #aeafab;
+}
+body header.navigation .main-menu .menu-item[data-id='jonco']
+{
+    color: #00afe1; 
+    background-color: #292d2e;
+}
+body header.navigation .main-menu .menu-item[data-id='diy']
+{
+    color: #02c9e0; 
+    background-color: #fefefe;
+}
+body header.navigation .main-menu .menu-item[data-id='smart-house']
+{
+    color: #231f20; 
+    background-color: #1d75bd;
+}
+body header.navigation .main-menu .menu-item img
+{
+    height: 90px;
+    padding: 10px;
+}
+body main
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; 
+
+    -webkit-box-flex: 1; 
+
+        -ms-flex-positive: 1; 
+
+            flex-grow: 1;
+}
+body main section
+{
+    cursor: pointer;
+    -webkit-transition-timing-function: ease-out;
+            transition-timing-function: ease-out; 
+    -webkit-transition-duration: .5s; 
+            transition-duration: .5s;
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: auto 100%;
+
+    -webkit-box-flex: 1;
+
+        -ms-flex-positive: 1;
+
+            flex-grow: 1;
+}
+body main section.active
+{
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+}
+body main section:hover
+{
+    background-position: left;
+}
+body main section[data-id='life-beauty']
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+
+    background-image: url('../images/fito.png');
+
+    -webkit-box-pack: center;
+
+        -ms-flex-pack: center;
+
+            justify-content: center;
+}
+body main section[data-id='life-beauty'] h2
+{
+    font-size: 40px;
+
+    display: none;
+
+    padding: 20px;
+
+    -webkit-transition-duration: .5s;
+
+            transition-duration: .5s;
+    -webkit-transform: skewY(-30deg);
+            transform: skewY(-30deg); 
+    text-align: center;
+
+    color: #55781e;
+    background-image: -webkit-linear-gradient(#fafaf9, #c7c8c5);
+    background-image: linear-gradient(#fafaf9, #c7c8c5);
+}
+body main section[data-id='life-beauty'] h2 span
+{
+    display: inline-block;
+
+    -webkit-transform: skewY(30deg) rotate(-30deg);
+
+            transform: skewY(30deg) rotate(-30deg);
+}
+body main section[data-id='jonco']
+{
+    background-image: url('../images/jonco.png');
+}
+body main section[data-id='diy']
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    background-image: url('../images/diy.png');
+
+    -webkit-box-pack: center;
+
+        -ms-flex-pack: center;
+
+            justify-content: center;
+}
+body main section[data-id='diy'] #reg
+{
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; 
+
+    color: #fefefe;
+    background: rgba(254, 254, 254, .7);
+}
+body main section[data-id='diy'] #reg h2
+{
+    margin: 0;
+    padding: 5px;
+
+    text-align: center;
+
+    border-bottom: 5px solid #fefefe; 
+    background-color: #02c9e0;
+}
+body main section[data-id='diy'] #reg #data
+{
+    border: none;
+}
+body main section[data-id='diy'] #reg #data label
+{
+    font-size: 20px;
+    font-weight: bold;
+
+    display: inline-block;
+
+    width: 100%;
+    padding: 5px 0;
+
+    text-align: center;
+
+    border-top-left-radius: 10px; 
+    border-top-right-radius: 10px;
+    background-color: #02c9e0;
+}
+body main section[data-id='diy'] #reg #data input,
+body main section[data-id='diy'] #reg #data textarea
+{
+    font-size: 15px;
+
+    display: inline-block;
+
+    width: 100%;
+    margin: 0 0 10px 0;
+    padding: 5px 0;
+
+    text-align: center; 
+
+    color: black;
+    border-style: none;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: #fefefe;
+    box-shadow: 0 0 0 2px #02c9e0 inset;
+}
+body main section[data-id='diy'] #reg #data input:active,
+body main section[data-id='diy'] #reg #data input:focus,
+body main section[data-id='diy'] #reg #data textarea:active,
+body main section[data-id='diy'] #reg #data textarea:focus
+{
+    outline: none;
+}
+body main section[data-id='diy'] #reg #data textarea
+{
+    width: 96.1%;
+    margin: 0; 
+    padding: 2%;
+
+    resize: none;
+}
+body main section[data-id='diy'] #reg #buttons
+{
+    padding: 0 0 10px 0;
+
+    text-align: center; 
+
+    border: none;
+}
+body main section[data-id='diy'] #reg #buttons label
+{
+    font-size: 20px;
+    font-weight: bold;
+
+    display: inline-block;
+
+    width: 40%;
+    padding: 5px;
+
+    border-radius: 10px; 
+    background-image: -webkit-linear-gradient(#029cad, #18e5fd); 
+    background-image: linear-gradient(#029cad, #18e5fd);
+}
+body main section[data-id='diy'] #reg #buttons label:active,
+body main section[data-id='diy'] #reg #buttons label:focus
+{
+    background-image: -webkit-linear-gradient(#18e5fd, #029cad);
+    background-image: linear-gradient(#18e5fd, #029cad);
+}
+body main section[data-id='diy'] #reg #buttons input
+{
+    display: none;
+}
+body main section[data-id='smart-house']
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+
+    background-image: url('../images/smarthouse.png');
+
+    -webkit-box-pack: center;
+
+        -ms-flex-pack: center;
+
+            justify-content: center;
+}
+body main section[data-id='smart-house'] h2
+{
+    font-size: 40px;
+
+    display: none;
+
+    padding: 20px;
+
+    -webkit-transition-duration: .5s;
+
+            transition-duration: .5s;
+    -webkit-transform: skewY(-30deg);
+            transform: skewY(-30deg); 
+    text-align: center;
+
+    color: #231f20;
+    background-image: -webkit-linear-gradient(#5aa7e6, #86bfed);
+    background-image: linear-gradient(#5aa7e6, #86bfed);
+}
+body main section[data-id='smart-house'] h2 span,
+body main section[data-id='smart-house'] h2 small
+{
+    display: inline-block;
+
+    -webkit-transform: skewY(30deg) rotate(-30deg);
+
+            transform: skewY(30deg) rotate(-30deg);
+}
