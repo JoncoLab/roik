@@ -36,6 +36,9 @@ body {
         display: flex;
         flex-basis: 50%;
         flex-grow: 1;
+        img {
+          height: $line * 9;
+        }
       }
 
       .contacts {
