@@ -64,6 +64,10 @@ body header.plain .logo
         -ms-flex-positive: 1;
             flex-grow: 1;
 }
+body header.plain .logo img
+{
+    height: 90px;
+}
 body header.plain .contacts
 {
     display: -webkit-box;
