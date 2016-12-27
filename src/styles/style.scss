@@ -30,9 +30,10 @@ body {
       align-items: center;
 
       background: {
-        color: fade_out($diybg, 0.5);
+        color: fade_out($diybg, 0.4);
       }
       .logo {
+        margin: $line / 2 0 $line / 2 $line;
         display: flex;
         flex-basis: 50%;
         flex-grow: 1;
@@ -42,6 +43,7 @@ body {
       }
 
       .contacts {
+        margin: auto $line auto 0;
         flex-basis: 50%;
         flex-grow: 1;
         display: flex;

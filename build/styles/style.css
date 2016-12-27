@@ -40,7 +40,7 @@ body header.plain
     display: -ms-flexbox;
     display: flex;
 
-    background-color: rgba(254, 254, 254, .5); 
+    background-color: rgba(254, 254, 254, .6); 
 
     -webkit-box-pack: center; 
 
@@ -56,6 +56,8 @@ body header.plain .logo
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+
+    margin: 5px 0 5px 10px;
 
     -ms-flex-preferred-size: 50%;
 
@@ -73,6 +75,8 @@ body header.plain .contacts
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+
+    margin: auto 10px auto 0;
 
     color: #292d2e; 
 
