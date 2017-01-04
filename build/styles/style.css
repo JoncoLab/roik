@@ -57,6 +57,7 @@ body header.plain .logo
     display: -ms-flexbox;
     display: flex;
 
+    max-height: 80px; 
     margin: 5px 0 5px 10px;
 
     -ms-flex-preferred-size: 50%;
@@ -65,10 +66,6 @@ body header.plain .logo
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
-}
-body header.plain .logo img
-{
-    height: 80px;
 }
 body header.plain .contacts
 {
